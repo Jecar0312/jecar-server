@@ -73,5 +73,19 @@ public class BoardController {
         reply.setBoard(boardService.findById(boardId));
         return replyService.save(reply);
     }
+
+    @ApiOperation(value = "댓글 수정", notes = "댓글을 수정한다.")
+    @PutMapping("/{boardId}/reply/{replyId}")
+    public Reply modifyReply(@PathVariable Integer replyId, @ModelAttribute final Reply updates) {
+        Reply reply = replyService.findById(replyId);
+        if (updates.getContent()!=null) reply.setContent(reply.getContent());
+        return replyService.save(reply);
+    }
+
+    @ApiOperation(value = "댓글 삭제", notes = "댓글을 삭제한다.")
+    @DeleteMapping("/{boardId}/reply/{replyId}")
+    public void deleteReply(@PathVariable Integer boardId, @PathVariable Integer replyId) {
+        replyService.delete(replyId);
+    }
     /////
 }

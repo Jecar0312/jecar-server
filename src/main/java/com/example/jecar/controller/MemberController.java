@@ -43,7 +43,7 @@ public class MemberController {
 
     @ApiOperation(value = "회원 수정", notes = "해당하는 회원 정보를 수정한다.")
     @PutMapping("/{id}")
-    public Member modify(@PathVariable Integer id, @RequestBody Member updates) {
+    public Member modify(@PathVariable Integer id, @ModelAttribute final Member updates) {
         Member member = memberService.findById(id);
         if (updates.getName()!=null) member.setName(updates.getName());
         if (updates.getPassword()!=null) member.setPassword(updates.getPassword());
