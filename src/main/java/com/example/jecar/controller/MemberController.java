@@ -5,6 +5,9 @@ import com.example.jecar.service.MemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +26,7 @@ public class MemberController {
         this.memberService = memberService;
     }
 
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @ApiOperation(value = "회원 조회", notes = "모든 회원 정보를 조회한다.")
     @GetMapping("/")
     public List<Member> list() {
