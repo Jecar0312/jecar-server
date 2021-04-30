@@ -3,7 +3,6 @@ package com.example.jecar.controller;
 import com.example.jecar.api.models.APIBoard;
 import com.example.jecar.dto.Board;
 import com.example.jecar.dto.Reply;
-import com.example.jecar.repository.BoardRepository;
 import com.example.jecar.service.BoardService;
 import com.example.jecar.service.ReplyService;
 import io.swagger.annotations.Api;
