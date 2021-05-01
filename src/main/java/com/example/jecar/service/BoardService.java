@@ -1,6 +1,6 @@
 package com.example.jecar.service;
 
-import com.example.jecar.dto.Board;
+import com.example.jecar.entity.Board;
 import com.example.jecar.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

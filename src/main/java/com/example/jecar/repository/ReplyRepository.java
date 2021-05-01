@@ -1,6 +1,6 @@
 package com.example.jecar.repository;
 
-import com.example.jecar.dto.Reply;
+import com.example.jecar.entity.Reply;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

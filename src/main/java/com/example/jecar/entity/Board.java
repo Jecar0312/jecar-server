@@ -1,4 +1,4 @@
-package com.example.jecar.dto;
+package com.example.jecar.entity;
 
 import lombok.Data;
 

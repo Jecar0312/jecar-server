@@ -1,8 +1,8 @@
 package com.example.jecar.api.models;
 
-import com.example.jecar.dto.Board;
-import com.example.jecar.dto.Member;
-import com.example.jecar.dto.Reply;
+import com.example.jecar.entity.Board;
+import com.example.jecar.entity.Member;
+import com.example.jecar.entity.Reply;
 import java.time.LocalDateTime;
 import java.util.List;
 

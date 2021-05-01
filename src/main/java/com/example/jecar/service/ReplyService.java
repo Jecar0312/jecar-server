@@ -1,6 +1,6 @@
 package com.example.jecar.service;
 
-import com.example.jecar.dto.Reply;
+import com.example.jecar.entity.Reply;
 import com.example.jecar.repository.ReplyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
